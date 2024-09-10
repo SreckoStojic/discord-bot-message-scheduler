@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: discord-bot-postgres
+    environment:
+      POSTGRES_USER: coreuser
+      POSTGRES_PASSWORD: corepass
+      POSTGRES_DB: core
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5455:5432
+    networks:
+      - main
+    restart: unless-stopped
+  redis:
+    image: redis:7.2.0
+    container_name: discord-bot-redis
+    ports:
+      - 6380:6379
+    networks:
+      - main
+networks:
+  main:
+    driver: bridge
+volumes:
+  pgdata:
+  node_modules:

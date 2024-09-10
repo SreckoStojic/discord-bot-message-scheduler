@@ -1,0 +1,32 @@
+{
+  "name": "discord-bot",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "tsc",
+    "build": "tsc",
+    "dev": "nodemon src/main.ts",
+    "start": "ts-node src/main.ts",
+    "prod": "node build/main.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.0",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "prisma": "^5.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.1",
+    "@types/node-cron": "^3.0.11",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "pretty-quick": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
