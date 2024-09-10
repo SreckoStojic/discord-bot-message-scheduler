@@ -10,7 +10,6 @@ import { COMMANDS, interactionCreate, replyMessage } from './commands';
 
 // Define a scheduled job
 cron.schedule('* * * * *', async () => {
-  console.log('Running a job every minute');
   const channel = client.channels.cache.get(config.channelId) as TextChannel;
   const userDzili = (await client.users.fetch('278980578416787456')) as User;
   await channel.send(`VIDI <@${userDzili.id}> ZVAO SAM TE NE ZVAO SAM VAS`);
