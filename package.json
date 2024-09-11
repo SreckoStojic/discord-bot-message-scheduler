@@ -7,7 +7,7 @@
     "prepare": "tsc",
     "build": "tsc",
     "dev": "nodemon src/main.ts",
-    "start": "node build/main.js",
+    "start": "node main.js",
     "prod": "node build/main.js"
   },
   "dependencies": {
